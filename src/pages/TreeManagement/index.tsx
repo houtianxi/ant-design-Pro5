@@ -3,7 +3,7 @@ import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import React from 'react';
 const { Search } = Input;
 
-const x = 8000
+const x = 8
 const y = 5;
 const z = 2;
 const gData = [];
@@ -91,7 +91,7 @@ class SearchTree extends React.Component {
       autoExpandParent: false,
     });
   };
-// 查找树接口
+  // 查找树接口
   onChange = e => {
     const { value } = e.target;
     const expandedKeys = dataList
@@ -110,7 +110,7 @@ class SearchTree extends React.Component {
   };
 
   render() {
-     console.log("render...")
+    console.log("render...")
     const { searchValue, expandedKeys, autoExpandParent } = this.state;
     const loop = data =>
       data.map(item => {
@@ -174,7 +174,10 @@ class SearchTree extends React.Component {
                 <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
                   <Button type="primary" htmlType="submit">
                     Submit
-        </Button>
+                  </Button>
+                  <Button type="primary" htmlType="reset">
+                              Reset
+                  </Button>
                 </Form.Item>
               </Form>
             </Col>
