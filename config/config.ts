@@ -86,6 +86,20 @@ export default defineConfig({
       ],
     },
     {
+      path: '/orgmanager',
+      name: '基础信息',
+      icon: 'crown',
+      access: 'canAdmin',
+      routes: [
+        {
+          path: '/orgmanager/org',
+          name: '组织架构',
+          icon: 'smile',
+          component: './TreeManagement',
+        },
+      ],
+    },
+    {
       name: '标准列表',
       icon: 'smile',
       path: '/listbasiclist',
