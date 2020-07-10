@@ -65,7 +65,7 @@ const handleAdd = async (fields: TableListItem) => {
  */
 const handleRemove = async (selectedRows: TableListItem[]) => {
   const hide = message.loading('正在删除');
-  console.log("删除方法")
+  console.log("删除传递的参数--->")
   console.log(selectedRows)
   if (!selectedRows) return true;
   try {
